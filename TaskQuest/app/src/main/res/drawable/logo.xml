@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Círculo de fondo -->
+    <path
+        android:fillColor="#4C1D95"
+        android:pathData="M100,100m-95,0a95,95 0,1 1,190 0a95,95 0,1 1,-190 0"/>
+
+    <!-- Escudo -->
+    <path
+        android:fillColor="#7C3AED"
+        android:strokeColor="#A78BFA"
+        android:strokeWidth="4"
+        android:pathData="M100,30 L160,60 C160,120 140,150 100,170 C60,150 40,120 40,60 Z"/>
+
+    <!-- Checkmark -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M75,95 L95,115 L125,75"/>
+
+    <!-- Estrellas decorativas -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M60,50L65,55L70,50L65,45Z"/>
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M140,50L145,55L150,50L145,45Z"/>
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M100,140L105,145L110,140L105,135Z"/>
+
+</vector>

@@ -1,0 +1,97 @@
+[versions]
+# Compose
+composeBom = "2024.04.01"
+activityCompose = "1.10.0"
+
+# Android Gradle Plugin & Kotlin
+agp = "8.8.0"
+kotlin = "2.0.0"
+
+# Android Core
+coreKtx = "1.15.0"
+lifecycleRuntimeKtx = "2.8.7"
+
+# Test
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+
+# Koin
+koin = "3.5.3"
+
+# Navigation
+composeNavigation = "2.8.5"
+appcompat = "1.7.0"
+material = "1.12.0"
+
+# Room
+roomCommon = "2.6.1"
+
+# Mongo
+mongo = "5.0.0"
+
+[libraries]
+# Compose
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Koin
+koin = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"}
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+
+# Android Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# Test
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# Navigation
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Room
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+
+# Mongo
+mongo = { group = "org.mongodb", name = "mongodb-driver-sync", version.ref = "mongo"}
+
+[bundles]
+# Compose
+compose = [
+    "androidx-activity-compose",
+    "androidx-ui",
+    "androidx-ui-graphics",
+    "androidx-ui-tooling-preview",
+    "androidx-material3"
+]
+
+# Test Compose
+compose-test = [
+    "androidx-ui-test-junit4",
+    "androidx-ui-test-manifest"
+]
+
+# Koin
+koin = [
+    "koin",
+    "koin-android",
+    "koin-compose"
+]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
